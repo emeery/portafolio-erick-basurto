@@ -39,7 +39,9 @@
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
               "./src/scripts/three.min.js",
-              "./src/scripts/vanta.globe.min.js"  
+              "./src/scripts/vanta.globe.min.js",
+              "./src/scripts/vanta.fog.min.js",
+              "./src/scripts/vanta.topology.min.js"
             ]
           },
           "configurations": {

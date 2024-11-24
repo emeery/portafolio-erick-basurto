@@ -1,5 +1,5 @@
 .example-container {
-  height: 80%;
+  height: 96%;
   border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
@@ -21,13 +21,15 @@
 .title {
   font-family: NeueMontrealMediumItalic;
   font-style: normal;
+  color: silver;
+  font-size: 45px;
+}
+.subtitle {
+  font-family: NeueMontrealMediumItalic;
+  font-style: normal;
   color: whitesmoke;
 }
 
-
-
-.title-bk {
-  font-family: NeueMontrealMediumItalic;
-  font-style: normal;
-  color: black;
-}
+img:hover {
+  cursor: pointer;
+} 

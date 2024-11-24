@@ -10,20 +10,24 @@ declare var VANTA: any;
 })
 export class AppComponent implements AfterViewInit {
   @ViewChild('sidenav') sidenav: MatSidenav;
-constructor() {}
+  linkedin = '../../../assets/images/LI.png';
+  constructor() { }
 
-ngAfterViewInit(): void {
-  VANTA.GLOBE({
-    el: '#vanta', // element selector string or DOM object reference
-    backgroundColor: 0x23153c,
-    color: 0xff3f81,
-    waveHeight: 20,
-    shininess: 50,
-    waveSpeed: 1.5,
-    zoom: 0.75
-  })
-}
+  ngAfterViewInit(): void {
+    VANTA.FOG({
+      el: '#vanta', // element selector string or DOM object reference
+      mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  highlightColor: 0xc7c799,
+  midtoneColor: 0xc29f97,
+  lowlightColor: 0xe8e8e8,
+  baseColor: 0x310000
+    })
+  }
 
 
-  
+
 }
