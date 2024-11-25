@@ -1,6 +1,6 @@
 .example-container {
-  height: 96%;
-  border: 1px solid rgba(0, 0, 0, 0.5);
+  height:100%;
+ // sborder: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 .example-sidenav-content {
@@ -10,13 +10,6 @@
   justify-content: center;
 }
 
-.example-sidenav {
-  user-select: none;
-}
-
-.full-width {
-  width: 100%;
-}
 
 .title {
   font-family: NeueMontrealMediumItalic;
@@ -30,6 +23,36 @@
   color: whitesmoke;
 }
 
-img:hover {
-  cursor: pointer;
-} 
+
+/* mat-toolbar{
+  position:fixed;
+  top:0;
+  z-index: 2;
+} */
+/* 
+mat-sidenav-container {
+  height:100%;
+} */
+
+// Move the content down so that it won't be hidden by the toolbar
+mat-sidenav {
+  padding-top: 3.5rem;
+  @media screen and (min-width: 600px) {
+    padding-top: 4rem;
+  }
+
+  .entry{
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding:0.75rem;
+  }
+}
+
+// Move the content down so that it won't be hidden by the toolbar
+mat-sidenav-content{
+  padding-top: 3.5rem;
+  @media screen and (min-width: 600px) {
+      padding-top: 4rem;
+  }
+}

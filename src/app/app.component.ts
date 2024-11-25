@@ -1,6 +1,11 @@
-import { HttpBackend } from '@angular/common/http';
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { BreakpointObserver } from '@angular/cdk/layout';
+import {
+  Component,
+  ViewChild,
+  AfterViewInit
+} from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
+
 declare var VANTA: any;
 
 @Component({
@@ -9,25 +14,41 @@ declare var VANTA: any;
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements AfterViewInit {
-  @ViewChild('sidenav') sidenav: MatSidenav;
-  linkedin = '../../../assets/images/LI.png';
-  constructor() { }
+  @ViewChild(MatSidenav)
+  sidenav!: MatSidenav;
+  isMobile= true;
+
+
+  constructor(private observer: BreakpointObserver) {}
+
+  ngOnInit() {
+    this.observer.observe(['(max-width: 800px)']).subscribe((screenSize) => {
+      if(screenSize.matches){
+        this.isMobile = true;
+      } else {
+        this.isMobile = false;
+      }
+    });
+  }
 
   ngAfterViewInit(): void {
-    VANTA.FOG({
+    VANTA.HALO({
       el: '#vanta', // element selector string or DOM object reference
       mouseControls: true,
   touchControls: true,
   gyroControls: false,
   minHeight: 200.00,
-  minWidth: 200.00,
-  highlightColor: 0xc7c799,
-  midtoneColor: 0xc29f97,
-  lowlightColor: 0xe8e8e8,
-  baseColor: 0x310000
+  minWidth: 200.00
     })
   }
 
+  toggleMenu() {
+    if(this.isMobile){
+      this.sidenav.toggle();
+    } else {
+      // do nothing for now
+    }
+  }
 
 
 }

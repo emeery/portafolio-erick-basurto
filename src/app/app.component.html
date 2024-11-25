@@ -1,4 +1,4 @@
-<mat-sidenav-container class="example-container">
+<!-- <mat-sidenav-container class="example-container">
 	<mat-sidenav #sidenav class="example-sidenav" mode="side" opened="true">
 		<mat-nav-list>
 			<mat-list-item>
@@ -31,4 +31,38 @@
 		</div>
 	</div>
 
-</mat-sidenav-container>
+</mat-sidenav-container> -->
+
+<mat-sidenav-container class="example-container">
+	<mat-sidenav class="example-sidenav" [mode]="isMobile ? 'over' : 'side'" [opened]="isMobile ? 'false' : 'true'">
+		<mat-nav-list>
+			<mat-list-item>
+				<span class="full-width">
+					<h1 class="title">Acerca</h1>
+				</span>
+			</mat-list-item>
+			<mat-list-item>
+				<span class="full-width">
+					<h1 class="title">Experiencia</h1>
+				</span>
+			</mat-list-item>
+			<mat-list-item>
+				<span class="full-width">
+					<h1 class="title">Proyectos</h1>
+				</span>
+			</mat-list-item>
+
+		</mat-nav-list>
+	</mat-sidenav>
+	<mat-sidenav-content style="background-color: #2a235a;" id=vanta>
+		<div  class="example-sidenav-content">
+			<div class="d-flex align-items-start flex-column" style="height: 600px;width: 90%;">
+				<div class=""><h1 class="title">Erick Basurto</h1></div>
+				<div class=""><h4 class="subtitle">Ingeniero y Consultor Comercial</h4></div>
+				<div class="mt-auto p-2"> <i style="color: white;" class="bi bi-linkedin h2"></i>
+				</div>
+			</div>
+		</div>
+	 
+	</mat-sidenav-content>
+  </mat-sidenav-container>
