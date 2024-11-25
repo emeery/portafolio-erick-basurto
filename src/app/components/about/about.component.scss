@@ -1,0 +1,28 @@
+.example-container {
+  height: 100%;
+}
+
+.example-sidenav {
+  background: rgb(42, 35, 90);
+  background: linear-gradient(0deg, rgba(42, 35, 90, 1) 0%, rgb(67, 67, 65) 100%);
+}
+
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-family: NeueMontrealMediumItalic;
+  font-style: normal;
+  color: silver;
+  font-size: 45px;
+}
+
+.subtitle {
+  font-family: NeueMontrealMediumItalic;
+  font-style: normal;
+  color: whitesmoke;
+}
