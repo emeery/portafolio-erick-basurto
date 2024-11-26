@@ -40,6 +40,7 @@
               
               "./src/scripts/three.min.js",
               "./src/scripts/vanta.trunk.min.js",
+              "./src/scripts/vanta.rings.min.js",
               "./src/scripts/vanta.globe.min.js",
               "./src/scripts/vanta.fog.min.js",
               "./src/scripts/vanta.topology.min.js",
