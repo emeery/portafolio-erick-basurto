@@ -1,5 +1,5 @@
 
-<mat-toolbar style="background: #0f0e1a">
+<mat-toolbar style="background-color: rgb(18, 18, 19);">
 	<button style="color: wheat;" mat-icon-button aria-label="Menu icon" (click)="toggleMenu()">
 	  <mat-icon>menu</mat-icon>
 	</button>
@@ -7,17 +7,17 @@
 <mat-sidenav-container class="example-container" autosize>
 	<mat-sidenav class="example-sidenav" [ngClass]="!isCollapsed ? 'expanded' : ''" [mode]="isMobile ? 'over' : 'side'" [opened]="isMobile ? 'false' : 'true'">
 		<mat-nav-list>
-			<mat-list-item>
+			<mat-list-item (click)="toggleMenu()" *ngIf="!isCollapsed" routerLink="/">
 				<span class="full-width">
 					<h2  class="title">Acerca</h2>
 				</span>
 			</mat-list-item>
-			<mat-list-item>
+			<mat-list-item (click)="toggleMenu()" *ngIf="!isCollapsed" routerLink="/experience">
 				<span class="full-width">
 					<h2  class="title">Experiencia</h2>
 				</span>
 			</mat-list-item>
-			<mat-list-item>
+			<mat-list-item (click)="toggleMenu()" *ngIf="!isCollapsed" routerLink="Proyectos">
 				<span class="full-width">
 					<h1 class="title">Proyectos</h1>
 				</span>

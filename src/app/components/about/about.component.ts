@@ -11,7 +11,7 @@ declare var VANTA: any;
 export class AboutComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     VANTA.RINGS({
-      el: '#vanta', // element selector string or DOM object reference
+      el: '#vanta-about', // element selector string or DOM object reference
       mouseControls: true,
       touchControls: true,
       gyroControls: false,

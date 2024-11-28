@@ -31,7 +31,7 @@ export class AppComponent  {
     });
   }
 
-
+  
 
   toggleMenu() {
     if(this.isMobile){
