@@ -1,12 +1,21 @@
-.example-container {
-  height: 100%;
-}
 
-.example-sidenav {
+/* .example-sidenav {
   background: rgb(42, 35, 90);
   background: linear-gradient(0deg, rgba(42, 35, 90, 1) 0%, rgb(67, 67, 65) 100%);
+} */
+body,
+h1,
+h2,
+h3 {
+  margin: 0;
 }
 
+#title {
+  font-family: NeueMontrealMediumItalic;
+  font-style: normal;
+  color: silver;
+  font-size: 35rem;
+}
 .example-sidenav-content {
   display: flex;
   height: 100%;
@@ -14,17 +23,18 @@
   justify-content: center;
 }
 
-.title {
-  font-family: NeueMontrealMediumItalic;
-  font-style: normal;
-  color: silver;
-  font-size: 45px;
-}
 
 .subtitle {
   font-family: NeueMontrealMediumItalic;
   font-style: normal;
   color: whitesmoke;
+}
+
+.footer {
+  font-family: NeueMontrealLight;
+  font-style: normal;
+  font-size: 14px;
+  color: lightslategray;
 }
 
 span {

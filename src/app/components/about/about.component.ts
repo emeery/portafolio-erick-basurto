@@ -1,4 +1,7 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { AfterViewInit, Component, Inject, PLATFORM_ID } from '@angular/core';
+import { gsap } from 'gsap';
+import { TextPlugin } from "gsap/TextPlugin";
 declare var VANTA: any;
 
 @Component({
@@ -9,9 +12,22 @@ declare var VANTA: any;
 
 
 export class AboutComponent implements AfterViewInit {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+
+  }  
   ngAfterViewInit(): void {
+    gsap.registerPlugin(TextPlugin);
+    gsap.to(`#title`, {
+      duration: 5,
+      color:'honeydew',
+      fontSize: 60,
+      text: `Erick Basurto`,
+      ease: `power2.in`
+    });
+
+
     VANTA.RINGS({
-      el: '#vanta-about', // element selector string or DOM object reference
+      el: '#vanta', // element selector string or DOM object reference
       mouseControls: true,
       touchControls: true,
       gyroControls: false,

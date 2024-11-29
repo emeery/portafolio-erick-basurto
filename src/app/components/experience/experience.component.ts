@@ -1,4 +1,9 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+//without this line, PixiPlugin and MotionPathPlugin may get dropped by your bundler (tree shaking)...
+gsap.registerPlugin(ScrollTrigger);
 declare var VANTA: any;
 
 
@@ -7,7 +12,8 @@ declare var VANTA: any;
   templateUrl: './experience.component.html',
   styleUrls: ['./experience.component.scss']
 })
-export class ExperienceComponent implements AfterViewInit {
+export class ExperienceComponent implements OnInit, AfterViewInit {
+  
   ngAfterViewInit(): void {
     VANTA.RINGS({
       el: '#vanta', // element selector string or DOM object reference
@@ -21,4 +27,13 @@ export class ExperienceComponent implements AfterViewInit {
 
     })
   }
+
+  ngOnInit() {
+    //this.setupGsap();
+  }
+
+ 
+
+
+
 }
