@@ -1,5 +1,5 @@
 .example-container {
-    height: 100%;
+    margin-left: 10px;
   }
   
   .example-sidenav {
@@ -15,11 +15,12 @@
     justify-content: center;
   }
   
-  .title {
+
+  #title {
     font-family: NeueMontrealMediumItalic;
     font-style: normal;
     color: silver;
-    font-size: 45px;
+    font-size: 35rem;
   }
   
   .subtitle {

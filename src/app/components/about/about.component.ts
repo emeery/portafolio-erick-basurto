@@ -1,6 +1,6 @@
-import { isPlatformBrowser } from '@angular/common';
 import { AfterViewInit, Component, Inject, PLATFORM_ID } from '@angular/core';
 import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { TextPlugin } from "gsap/TextPlugin";
 declare var VANTA: any;
 
@@ -16,18 +16,27 @@ export class AboutComponent implements AfterViewInit {
 
   }  
   ngAfterViewInit(): void {
-    gsap.registerPlugin(TextPlugin);
+    gsap.registerPlugin(TextPlugin, ScrollTrigger);
+    
     gsap.to(`#title`, {
-      duration: 5,
+      duration: 4,
       color:'honeydew',
-      fontSize: 60,
+      fontSize: 90,
       text: `Erick Basurto`,
       ease: `power2.in`
     });
 
+    gsap.to(`#subtitle`, {
+      duration: 5,
+      color:'honeydew',
+      fontSize: 20,
+      text: `Ingeniero en Gestión Empresarial`,
+      ease: `circ.in`
+    });
+
 
     VANTA.RINGS({
-      el: '#vanta', // element selector string or DOM object reference
+      el: '#vanta-exp', // element selector string or DOM object reference
       mouseControls: true,
       touchControls: true,
       gyroControls: false,
