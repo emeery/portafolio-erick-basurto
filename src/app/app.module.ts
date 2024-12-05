@@ -22,7 +22,7 @@ import { AppRoutingModule } from './app.routing';
     AppRoutingModule,
     SharedModule,
     RouterModule,
-    NgbModule
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
