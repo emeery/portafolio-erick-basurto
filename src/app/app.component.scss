@@ -56,3 +56,24 @@ mat-sidenav-content {
 .expanded {
   width: 250px;
 }
+
+div{
+  width: 100%;
+  background-color: black;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+p{
+  display: inline-block;
+  color: #FFF;
+  font-family: NeueMontrealMediumItalic;
+  padding-left: 100%;
+  font-size: 20px;
+  margin-top: 8px;
+  animation: move 20s linear infinite;
+}
+@keyframes move {
+  0%   { transform: translate(0, 0); }
+  100% { transform: translate(-100%, 0); }
+}
