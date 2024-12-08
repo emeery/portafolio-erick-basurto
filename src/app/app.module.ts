@@ -9,12 +9,14 @@ import { SharedModule } from 'src/shared/shared.module';
 import { AboutComponent } from './components/about/about.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { AppRoutingModule } from './app.routing';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +24,6 @@ import { AppRoutingModule } from './app.routing';
     AppRoutingModule,
     SharedModule,
     RouterModule,
-    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

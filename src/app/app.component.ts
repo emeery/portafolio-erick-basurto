@@ -2,26 +2,35 @@ import { BreakpointObserver } from '@angular/cdk/layout';
 import {
   Component,
   ViewChild,
-  AfterViewInit
+  AfterViewInit,
+  ElementRef,
+  ViewEncapsulation
 } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ModalComponent } from './components/modal/modal.component';
 
 declare var VANTA: any;
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class AppComponent  {
-  @ViewChild(MatSidenav)
-  sidenav!: MatSidenav;
+  @ViewChild(MatSidenav) sidenav!: MatSidenav;
+  @ViewChild("content",{static:true}) content:ElementRef;
+  
   isMobile = true;
   isCollapsed = true;
 
-  constructor(private observer: BreakpointObserver) { }
+  
+  constructor(private observer: BreakpointObserver,
+    private modalService: NgbModal) { }
 
   ngOnInit() {
+    this.open();
     this.observer.observe(['(max-width: 800px)']).subscribe((screenSize) => {
       if (screenSize.matches) {
         this.isMobile = true;
@@ -31,8 +40,10 @@ export class AppComponent  {
     });
   }
 
-  
 
+  open() {
+      const modalRef = this.modalService.open(ModalComponent, {windowClass:'dark-modal', size: 'lg', backdrop: 'static'});
+  }
   toggleMenu() {
     if(this.isMobile){
       this.sidenav.toggle();

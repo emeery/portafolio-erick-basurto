@@ -1,22 +1,35 @@
-<div >
-	<p><span style="color: orange;">FLASH SALE</span>  ERICK BASURTO &nbsp;&nbsp; <img width="50px" height="50px" src="../assets/images/sale (1).png">&nbsp;&nbsp; <span style="color: orange;">  FLASH SALE</span> ERICK BASURTO &nbsp; <img width="50px" height="50px" src="../assets/images/sale (1).png">   </p>
-  </div>
+<div id="animated-text-strip">
+	<span class="marquee">&nbsp;ERICK BASURTO <span class="color-sale">SALE</span>&nbsp;ERICK BASURTO <span
+			class="color-sale">SALE</span>&nbsp;ERICK BASURTO <span class="color-sale">SALE</span>&nbsp; </span>
+	<span class="marquee">&nbsp;ERICK BASURTO <span class="color-sale">SALE</span>&nbsp;ERICK BASURTO <span
+			class="color-sale">SALE</span>&nbsp;ERICK BASURTO <span class="color-sale">SALE</span>&nbsp; </span>
+	<span class="marquee">&nbsp;ERICK BASURTO <span class="color-sale">SALE</span>&nbsp;ERICK BASURTO <span
+			class="color-sale">SALE</span>&nbsp;ERICK BASURTO <span class="color-sale">SALE</span>&nbsp; </span>
+
+	<!-- 	<span class="marquee">ERICK BASURTO <span class="color-sale">SALE</span> ERICK BASURTO <span class="color-sale">SALE</span>&nbsp;</span> -->
+	<!-- <span class="marquee">ERICK BASURTO <span class="color-sale">SALE</span> ERICK BASURTO <span class="color-sale">SALE</span>&nbsp;</span> -->
+</div>
+
+<!-- <div >
+	<p><span style="color: orange;">FLASH SALE</span>  ERICK BASURTO &nbsp;&nbsp; <img width="50px" height="50px" src="../assets/images/sale (1).png">&nbsp;&nbsp; <span style="color: orange;">  FLASH SALE</span> ERICK BASURTO &nbsp; <img width="50px" height="50px" src="../assets/images/sale (1).png"> <span style="color: orange;">FLASH SALE</span>  ERICK BASURTO &nbsp;&nbsp; <img width="50px" height="50px" src="../assets/images/sale (1).png">&nbsp;&nbsp; <span style="color: orange;">  FLASH SALE</span> ERICK BASURTO &nbsp; <img width="50px" height="50px" src="../assets/images/sale (1).png">  </p>
+  </div> -->
 <mat-toolbar style="background-color: rgb(18, 18, 19);">
 	<button style="color: wheat;" mat-icon-button aria-label="Menu icon" (click)="toggleMenu()">
-	  <mat-icon>menu</mat-icon>
+		<mat-icon>menu</mat-icon>
 	</button>
-  </mat-toolbar>
+</mat-toolbar>
 <mat-sidenav-container class="example-container" autosize>
-	<mat-sidenav class="example-sidenav" [ngClass]="!isCollapsed ? 'expanded' : ''" [mode]="isMobile ? 'over' : 'side'" [opened]="isMobile ? 'false' : 'true'">
+	<mat-sidenav class="example-sidenav" [ngClass]="!isCollapsed ? 'expanded' : ''" [mode]="isMobile ? 'over' : 'side'"
+		[opened]="isMobile ? 'false' : 'true'">
 		<mat-nav-list>
 			<mat-list-item (click)="toggleMenu()" *ngIf="!isCollapsed" routerLink="/">
 				<span class="full-width">
-					<h2  class="title">Acerca</h2>
+					<h2 class="title">Acerca</h2>
 				</span>
 			</mat-list-item>
 			<mat-list-item (click)="toggleMenu()" *ngIf="!isCollapsed" routerLink="/experience">
 				<span class="full-width">
-					<h2  class="title">Experiencia</h2>
+					<h2 class="title">Experiencia</h2>
 				</span>
 			</mat-list-item>
 			<mat-list-item (click)="toggleMenu()" *ngIf="!isCollapsed" routerLink="Proyectos">
@@ -29,6 +42,18 @@
 	</mat-sidenav>
 	<mat-sidenav-content style="overflow: hidden;width: 100%;height: 100%;margin: 0;padding: 0;">
 		<router-outlet></router-outlet>
-	 
+
 	</mat-sidenav-content>
-  </mat-sidenav-container>
+</mat-sidenav-container>
+
+<!-- <ng-template #content let-modal>
+	<div class="modal-header">
+	  <h4 class="modal-title">Modal title</h4>
+	</div>
+	<div class="modal-body">
+	  <p>Este es el portafolio de Erick Basurto&hellip;</p>
+	</div>
+	<div class="modal-footer">
+	  <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+	</div>
+  </ng-template> -->

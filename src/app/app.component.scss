@@ -57,23 +57,55 @@ mat-sidenav-content {
   width: 250px;
 }
 
-div{
-  width: 100%;
-  background-color: black;
-  white-space: nowrap;
+/* Core functionality */
+#animated-text-strip{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
   overflow: hidden;
-  box-sizing: border-box;
 }
-p{
-  display: inline-block;
-  color: #FFF;
+#animated-text-strip .marquee {
+  white-space: nowrap;
+  animation: marquee 5s linear infinite;
+  max-width: none;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+
+/* Styles for the sake of the demonstration */
+#animated-text-strip{
+  background:black;
+  padding: 1rem 0;
+}
+.marquee{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2rem;
   font-family: NeueMontrealMediumItalic;
-  padding-left: 100%;
-  font-size: 20px;
-  margin-top: 8px;
-  animation: move 20s linear infinite;
+  color: white;
+}   
+
+.color-sale {
+  color: orange
 }
-@keyframes move {
-  0%   { transform: translate(0, 0); }
-  100% { transform: translate(-100%, 0); }
+
+p {
+  font-size: 2rem;
+  font-family: NeueMontrealMediumItalic;
 }
+
+
+
+.modal-title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2rem;
+  font-family: NeueMontrealMediumItalic;
+}
+
+
